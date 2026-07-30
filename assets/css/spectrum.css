@@ -919,18 +919,70 @@ a.light-text:focus {
     color: #f4f5f7;
   }
 }
-@media (min-width: 767px) {
-  .about-img-1 {
-    background-image: url(../img/RobertaDeVito_MachineLearning.jpg);
+/* Research interests: 2x2 grid of full-figure cards (replaces the circular
+   owl-carousel). White cards on the blue section, blue caption bar, hover lift. */
+.about-1 .research-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+.research-card {
+  display: block;
+  width: 100%;
+  background: #f4f5f7;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 15px 0;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.research-card:hover,
+.research-card:focus {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+}
+.research-media {
+  background: #ffffff;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+.research-media img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+.research-card h3 {
+  margin: 0;
+  background: #2c7bb0;
+  color: #f4f5f7;
+  font-size: 20px;
+  text-align: center;
+  padding: 14px 10px;
+  letter-spacing: 0.02em;
+  transition: background 0.3s ease;
+}
+.research-card:hover h3,
+.research-card:focus h3 {
+  background: #24688f;
+}
+@media (max-width: 767px) {
+  .about-1 .research-grid {
+    display: block;
   }
-  .about-img-2 {
-    background-image: url(../img/RobertaDeVito_Bayesian_Analysis.jpg);
+  .research-media {
+    height: 220px;
   }
-  .about-img-3 {
-    background-image: url(../img/RobertaDeVito_High_Dimensional_Data.jpg);
-  }
-  .about-img-4 {
-    background-image: url(../img/Zhuodiao_Knockoff.png);
+  .research-card h3 {
+    font-size: 17px;
+    padding: 11px 8px;
   }
 }
 .blog-1 .blog-col {

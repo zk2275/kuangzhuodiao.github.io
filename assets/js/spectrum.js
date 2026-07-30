@@ -46,7 +46,9 @@ jQuery(document).ready(function() {
     })
 
     // Activates Owl Carousel Sliders
-    $("#about-1-carousel, #services-1-carousel").owlCarousel({
+    // (#about-1-carousel removed: Research is now a static 2x2 grid, and the
+    //  Skills section reuses that id but should not become a carousel.)
+    $("#services-1-carousel").owlCarousel({
 
         items: 4,
         itemsDesktop: [1199, 3],
